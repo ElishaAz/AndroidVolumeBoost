@@ -62,6 +62,9 @@ public class VolumeBoostService extends Service {
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 
         enhancer = new LoudnessEnhancer(0);
+
+        enhancer.setTargetGain(getLoudness());
+        enhancer.setEnabled(true);
     }
 
     @Override
